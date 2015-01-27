@@ -6,6 +6,8 @@ project_name = "cool_project_name"
 
 puts("Building directory structure...")
 
+Dir.chdir ".."
+
 system "mkdir", "-p", project_name
 system "mkdir", "-p", (project_name + "/lib")
 system "mkdir", "-p", (project_name + "/spec")
@@ -30,7 +32,7 @@ Dir.chdir "../views"
 system `touch index.erb`
 
 
-Dir.chdir "../public"
+Dir.chdir "../public/css"
 system `touch styles.css`
 
 puts("K done <3")
